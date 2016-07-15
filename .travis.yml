@@ -1,6 +1,10 @@
 before_install:
+    - sudo add-apt-repository --yes ppa:octave/stable
     - sudo apt-get update -qq
-    - sudo apt-get install -y -qq octave
+
+install:
+    - sudo apt-get install -qq octave liboctave-dev libmpfr-dev
+    
 script: ls -l
 
 
